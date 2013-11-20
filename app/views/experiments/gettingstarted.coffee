@@ -3,7 +3,7 @@ class GettingStartedView extends Backbone.View
     render: ->
         # Scene settings
         width = 400
-        height = 600
+        height = 400
         # Camera settings
         viewAngle = 45
         aspect = width/height
@@ -20,7 +20,8 @@ class GettingStartedView extends Backbone.View
         segments = 16
         rings = 16
         sphereGeometry = new THREE.SphereGeometry(radius, segments, rings)
-        sphereMaterial = new THREE.MeshLambertMaterial color: 0xCC0000
+        sphereMaterial = new THREE.MeshLambertMaterial color: 0x4395AA
+        sphereMaterial.wireframe = true
         sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
         # Rendering Objects
         renderer = new THREE.WebGLRenderer
